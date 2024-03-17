@@ -94,40 +94,15 @@ public class OnlineShoppingSystem {
     public static void main(String[] args) {
         // Musterileri olustur
         Customer customer1 = new Customer("Cem", 30);
-        Customer customer2 = new Customer("Ahmet", 35);
-        Customer customer3 = new Customer("Mehmet", 25);
-
-        // Urunleri olustur
-        Product product1 = new Product("Laptop", "Elektronik", 5000, 10);
-        Product product2 = new Product("Telefon", "Elektronik", 3000, 15);
-        Product product3 = new Product("Kitap", "Eğitim", 50, 50);
-
-        // Faturalari olustur
-        Invoice invoice1 = new Invoice(2000);
-        Invoice invoice2 = new Invoice(2500);
-        Invoice invoice3 = new Invoice(1500);
-
+        
         // Siparisleri olustur
         List<Product> orderProducts1 = new ArrayList<>();
         orderProducts1.add(product1);
-        orderProducts1.add(product2);
-        Order order1 = new Order(customer1, orderProducts1, invoice1);
-
-        List<Product> orderProducts2 = new ArrayList<>();
-        orderProducts2.add(product3);
-        Order order2 = new Order(customer2, orderProducts2, invoice2);
-
-        List<Product> orderProducts3 = new ArrayList<>();
-        orderProducts3.add(product1);
-        orderProducts3.add(product2);
-        orderProducts3.add(product3);
-        Order order3 = new Order(customer3, orderProducts3, invoice3);
-
+    
         // Sistemdeki butun musteri sayisini bul
         List<Customer> customers = new ArrayList<>();
         customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
+       
         int totalCustomerCount = customers.size();
         System.out.println("Sistemdeki toplam musteri sayisi: " + totalCustomerCount);
 
